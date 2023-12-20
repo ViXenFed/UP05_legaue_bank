@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лига банк</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Модальное окно</h2>
+          <form>
+            <label for="login">Логин:</label>
+            <input type="text" id="login" autofocus>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password">
+            <button id="showPassword">Показать пароль</button>
+            <a href="#" id="forgotPassword">Забыли пароль?</a>
+            <input type="submit" value="Войти">
+          </form>
+        </div>
+    </div>
+    <div id="burger">
+        <p onclick="getMenu()">Меню</p>
+    </div>
+    <header>
+        <div id="logo">
+            <img src="image/svg/logo.svg" alt="">
+        </div>
+        <div id="nav">
+            <a href="#">Услуги</a>
+            <a href="#">Рассчитать кредит</a>
+            <a href="#">Контакты</a>
+            <a href="#">Задать вопрос</a>
+        </div>
+        <div id="cab">
+            <img src="image/svg/icon-entrance.svg" alt="">
+            <a href="#" id="openModal">Войти в Интернет-банк</a>
+        </div>
+    </header>
+    <main>
+        <div id="slider">
+
+            <div id="first_slide">
+                <img src="image/slider-bg-main@2x.jpg" alt="">
+                <div id="first_slide_text" class="slide_text">
+                    <h1>Лига банк</h1>
+                    <p>Кредиты на любой случай</p>
+                    <a href="#calc" style="text-decoration: none;">Рассчитать кредит</a>
+                </div>
+            </div>
+
+            <div id="second_slide">
+                <img src="image/slider-bg-man@2x.jpg" alt="">
+                <div id="second_slide_text" class="slide_text hidden">
+                    <h1>Лига банк</h1>
+                    <p>Ваша уверенность в завтрашнем дне</p>
+                </div>
+            </div>
+
+            <div id="third_slide">
+                <img src="image/slider-bg-girl@2x.jpg" alt="">
+                <div id="third_slide_text" class="slide_text hidden">
+                    <h1>Лига банк</h1>
+                    <p>Кредиты на любой случай</p>
+                    <a href="#calc" style="text-decoration: none;">Рассчитать кредит</a>
+                </div>
+            </div>
+
+        </div>
+        <div id="swiper">
+            <div id="tab">
+                <p id="tab_1" onclick="getSwipe(this)">Вклады</p>
+                <p id="tab_2" onclick="getSwipe(this)">Кредиты</p>
+                <p id="tab_3" onclick="getSwipe(this)">Страхование</p>
+                <p id="tab_4" onclick="getSwipe(this)">Онлайн-сервисы</p>
+            </div>
+            <div id="swiper__slide">
+
+                <div id="first_swipe" class="swipes">
+                    <div class="swiper_text">
+                        <p class="sw__header">Вклады Лига банка - это выгодная инвестиция в своё будущее!</p>
+                        <p>Проценты по вкладам до 7%</p>
+                        <p>Разнообразные условия</p>
+                        <p>Возможность ежемесячной капитализации или вывод процентов на банковскую карту</p>
+                        <button class="swiper_btn">Узнать подробнее</button>
+                    </div>
+                    <img src="image/content/tab-piggybank-desctop@1x.jpg" alt="">
+                </div>
+                
+                <div id="second_swipe" class="hidden swipes">
+                    <div class="swiper_text">
+                        <p class="sw__header">Лига Банк выдает кредиты под любые цели</p>
+                        <p>Ипотечный кредит</p>
+                        <p>Автокредит</p>
+                        <p>Потребительский кредит</p>
+                        <p>
+                            Рассчитайте ежемесячный платеж и ставку по кредиту воспользовавшись нашим <a href="#calc" style="text-decoration: underline; color: #000;">кредитным калькулятором</a>
+                        </p>
+                    </div>
+                    <img src="image/content/tab-car-desctop@2x.jpg" alt="" class="swiper_img">
+                </div>
+
+                <div id="third_swipe" class="hidden swipes">
+                    <div class="swiper_text">
+                        <p class="sw__header">Лига Страхование — застрахуем все что захотите</p>
+                        <p>Автомобильное страхование</p>
+                        <p>Страхование жизни и здоровья</p>
+                        <p>Страхование недвижимости</p>
+                        <button class="swiper_btn">Узнать подробнее</button>
+                    </div>
+                    <img src="image/content/tab-padlock-desctop@2x.jpg" alt="" class="swiper_img">
+                </div>
+
+                <div id="fourth_swipe" class="hidden swipes">
+                    <div class="swiper_text">
+                        <p class="sw__header">Вклады Лига банка - это выгодная инвестиция в своё будущее!</p>
+                        <p>Проценты по вкладам до 7%</p>
+                        <p>Разнообразные условия</p>
+                        <p>Возможность ежемесячной капитализации или вывод процентов на банковскую карту</p>
+                        <button class="swiper_btn">Узнать подробнее</button>
+                    </div>
+                    <img src="image/content/tab-phone-desctop@2x.jpg" alt="" class="swiper_img">
+                </div>
+
+            </div>
+        </div>
+        <div id="credit">
+            <div id="calc">
+                <div id="print_info">
+                    <h1>Кредитный калькулятор</h1>
+                    <h2>Шаг 1. Цель кредита</h2>
+                    <select name="" id="" class="calc_input">
+                        <option value="" selected>Выберите цель кредита</option>
+                        <option value="ip">Ипотечное кредитование</option>
+                        <option value="auto">Автомобильное кредитование</option>
+                        <option value="potreb">Потребительский кредит</option>
+                    </select>
+
+                    <!-- Ипотека -->
+
+                    <div class="ip hidden">
+                        <div class="flex_1">
+                            <h2>Шаг 2. Введите параметры кредита</h2>
+                            <div class="person">
+                                <label for="sum">Стоимость недвижимости</label>
+                                <input type="number" name="sum" placeholder="2 000 000 рублей" class="calc_input" min="1200000" max="25000000" step="100000" id="ip_home" onchange="checkInpIp(this)">
+                                <p style="color: gray; height: 10px;">От 1 200 000 до 25 000 000 рублей</p>
+                                <p style="color: red;" class="hidden" id="alert_ip1">Минимум 1 200 000 и максимум 25 000 000!</p>
+                            </div>
+                            <div class="person">
+                                <label for="vznos">Первоначальный взнос</label>
+                                <input type="number" name="vznos" placeholder="200 000 рублей" class="calc_input" id="ip_perv" onchange="checkInpIp(this)">
+                                <p style="color: red;" class="hidden" id="alert_ip2">Минимум 10% и не больше суммы кредита!</p>
+                            </div>
+                            <div class="person">
+                                <label for="time">Срок кредитования</label>
+                                <input type="number" name="time" id="ip_time" placeholder="5 лет" class="calc_input" onchange="checkInpIp(this)">
+                                <p style="color: red;" class="hidden" id="alert_ip3">Минимум 5 лет и максимум 25 лет!</p>
+                            </div>
+                        </div>
+                        <div class="flex_2">
+                            <div id="credit_info">
+                                <h2>Наше предложение</h2>
+                                <div class="txt_column">
+                                    <p class="hidden" id="ip_sum">Тест</p>
+                                    <p id="ip_sum">Сумма ипотеки</p>
+                                    <p class="hidden" id="ip_monthly">Тест</p>
+                                    <p id="ip_monthly">Ежемесячный платёж</p>
+                                </div>
+                                <div class="txt_column">
+                                    <p class="hidden" id="ip_stavka">Тест</p>
+                                    <p id="ip_stavka">Процентная ставка</p>
+                                    <p class="hidden" id="ip_dohod">Тест</p>
+                                    <p id="ip_dohod">Необходимый доход</p>
+                                </div>
+                                <button>Оформить заявку</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Авто -->
+
+                    <div class="auto hidden">
+                        <div class="flex_1">
+                            <h2>Шаг 2. Введите параметры кредита</h2>
+                            <div class="person">
+                                <label for="sum">Стоимость автомобиля</label>
+                                <input type="number" name="sum" id="auto_sum" placeholder="2 000 000 рублей" class="calc_input" onchange="checkInpAuto(this)">
+                                <p style="color: gray; height: 10px;">От 500 000 до 5 000 000 рублей</p>
+                            </div>
+                            <div class="person">
+                                <label for="vznos">Первоначальный взнос</label>
+                                <input type="number" name="vznos" id="auto_perv" placeholder="400 000 рублей" class="calc_input" onchange="checkInpAuto(this)">
+                            </div>
+                            <div class="person">
+                                <label for="time">Срок кредитования</label>
+                                <input type="number" name="time" id="auto_time" placeholder="5 лет" class="calc_input" onchange="checkInpAuto(this)">
+                            </div>
+                        </div>
+                        <div class="flex_2">
+                            <div id="credit_info">
+                                <h2>Наше предложение</h2>
+                                <div class="txt_column">
+                                    <p class="hidden" id="auto_sum_pr">Тест</p>
+                                    <p>Сумма ипотеки</p>
+                                    <p class="hidden" id="auto_monthly">Тест</p>
+                                    <p>Ежемесячный платёж</p>
+                                </div>
+                                <div class="txt_column">
+                                    <p class="hidden" id="auto_stavka">Тест</p>
+                                    <p>Процентная ставка</p>
+                                    <p class="hidden" id="auto_dohod">Тест</p>
+                                    <p>Необходимый доход</p>
+                                </div>
+                                <button>Оформить заявку</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Потребительский -->
+
+                    <div class="potreb hidden">
+                        <div class="flex_1">
+                            <h2>Шаг 2. Введите параметры кредита</h2>
+                            <div class="person">
+                                <label for="sum">Сумма потребительского кредита</label>
+                                <input type="number" name="sum" id="potreb_sum" placeholder="2 000 000 рублей" class="calc_input" onchange="checkInpPotr(this)">
+                                <p style="color: gray; height: 10px;">От 50 000 до 3 000 000 рублей</p>
+                            </div>
+                            <div class="person">
+                                <label for="time">Срок кредитования</label>
+                                <input type="number" name="time" id="potreb_time" placeholder="1 год" class="calc_input" onchange="checkInpPotr(this)">
+                                <p style="color: gray; height: 10px;">От 1 года до 7 лет</p>
+                            </div>
+                        </div>
+                        <div class="flex_2">
+                            <div id="credit_info">
+                                <h2>Наше предложение</h2>
+                                <div class="txt_column">
+                                    <p class="hidden" id="potreb_sum_pr">Тест</p>
+                                    <p>Сумма кредита</p>
+                                    <p class="hidden" id="potreb_monthly">Тест</p>
+                                    <p>Ежемесячный платёж</p>
+                                </div>
+                                <div class="txt_column">
+                                    <p class="hidden" id="potreb_stavka">Тест</p>
+                                    <p>Процентная ставка</p>
+                                    <p class="hidden" id="potreb_dohod">Тест</p>
+                                    <p>Необходимый доход</p>
+                                </div>
+                                <button>Оформить заявку</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="map">
+            <h1>Отделения Лига Банка</h1>
+            <img src="image/bg-map@2x.jpg" alt="">
+        </div>
+    </main>
+    <footer>
+        <div id="info_footer" class="foot_el">
+            <img src="image/svg/logo.svg" alt="">
+            <p>150015, г. Москва, ул. Московская, д. 32 Генеральная лицензия Банка России №1050 © Лига Банк, 2019</p>
+        </div>
+        <div id="nav_footer" class="foot_el">
+            <p>Услуги</p>
+            <p>Рассчитать кредит</p>
+            <p>Контакты</p>
+            <p>Задать вопрос</p>
+        </div>
+        <div id="tel1_footer" class="foot_el tel">
+            <a href="tel:*0904">*0904</a>
+            <p>Бесплатно для абонентов МТС, Билайн, Мегафон, Теле2</p>
+        </div>
+        <div id="tel2_footer" class="foot_el tel">
+            <a href="tel:88001112233">8 800 111 22 33</a>
+            <p>Бесплатный для всех городов России</p>
+        </div>
+    </footer>
+    <script
+        src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+        crossorigin="anonymous">
+    </script>
+    <script>
+        // Калькулятор
+        let calc_value = ''; let prev_val = '';
+        document.querySelector('.calc_input').addEventListener('change', function() {
+            calc_value = document.querySelector('select').value;
+                switch (calc_value) {
+                    case 'ip':
+                        if (!prev_val) {
+                            prev_val = calc_value;
+                            $('.ip').removeClass('hidden');
+                            break;
+                        } else {
+                            $('.' + prev_val).addClass('hidden');
+                            prev_val = calc_value;
+                            $('.ip').removeClass('hidden');
+                            break;
+                        }
+                    
+                    case 'auto':
+                    if (!prev_val) {
+                            prev_val = calc_value;
+                            $('.auto').removeClass('hidden');
+                            break;
+                        } else {
+                            $('.' + prev_val).addClass('hidden');
+                            prev_val = calc_value;
+                            $('.auto').removeClass('hidden');
+                            break;
+                        }
+                    
+                        case 'potreb':
+                    if (!prev_val) {
+                            prev_val = calc_value;
+                            $('.potreb').removeClass('hidden');
+                            break;
+                        } else {
+                            $('.' + prev_val).addClass('hidden');
+                            prev_val = calc_value;
+                            $('.potreb').removeClass('hidden');
+                            break;
+                        }
+                
+                    default:
+                        $('.' + prev_val).addClass('hidden');
+                        break;
+                }
+            }
+        );
+        function checkInpIp(el) {
+            switch (el.id){
+                case 'ip_home':
+                    if (el.value < 50000 || el.value > 25000000) $('p#alert_ip1').removeClass('hidden');
+                    else $('p#alert_ip1').addClass('hidden');
+                    break;
+                case 'ip_perv':
+                    if (el.value < (ip_home.value)/10 || el.value > ip_home.value) $('p#alert_ip2').removeClass('hidden');
+                    else $('p#alert_ip2').addClass('hidden');
+                    break;
+                case 'ip_time':
+                    if (el.value < 5 || el.value > 25) $('p#alert_ip3').removeClass('hidden');
+                    else $('p#alert_ip3').addClass('hidden');
+                    break;
+            }
+            if ($('#ip_home').val() && $('#ip_perv').val() && $('#ip_time').val()) {
+                let sum = ip_home.value - ip_perv.value;
+                if (sum > 25000000 || sum < 50000) return;
+                let stavka = (1 + (9.6/12/100) ^ ip_time.value * 12);
+                if (stavka < (sum)/10 || stavka > sum || $('#ip_time').val() > 25 || $('#ip_time').val() < 5) return;
+                let monthly = sum * (9.6/12/100) * stavka / (stavka-1);
+                let dohod = monthly * 2.5;
+                $('#ip_sum').removeClass('hidden').html(sum + ' рублей')
+                $('#ip_stavka').removeClass('hidden').html(Math.floor(stavka,1) + '%');
+                $('#ip_monthly').removeClass('hidden').html(Math.floor(monthly) + ' мес.')
+                $('#ip_dohod').removeClass('hidden').html(Math.floor(dohod) + ' рублей')
+            }
+        }
+        let auto_sum; let auto_time; let auto_perv;
+        function checkInpAuto(el) {
+            switch (el.id){
+                case 'auto_sum':
+                    if (el.value <= 5000000 || el.value >= 50000) auto_sum = el.value;
+                    else alert('От 50 000 до 5 000 000!')
+                    break;
+                case 'auto_perv':
+                    if (el.value >= (auto_sum/20) && el.value <= auto_sum) auto_perv = el.value;
+                    else alert('Не менее 20% и не более суммы кредита!')
+                    break;
+                case 'auto_time':
+                    if (el.value >= 1 && el.value <= 5) auto_time = el.value;
+                    else alert('Не менее года и не более 5 лет!')
+                    break;
+            }
+            if (auto_sum && auto_time && auto_perv) {
+                let sum_print = auto_sum - auto_perv;
+                let stavka = (1 + (3.5/12/100) ^ auto_time * 12)
+                let monthly = sum_print * (3.5/12/100) * stavka / (stavka-1)
+                let dohod = monthly * 2.5;
+                $('#auto_sum_pr').removeClass('hidden').html(sum_print + ' рублей')
+                $('#auto_stavka').removeClass('hidden').html(Math.floor(stavka,1) + '%');
+                $('#auto_monthly').removeClass('hidden').html(Math.floor(monthly) + ' руб')
+                $('#auto_dohod').removeClass('hidden').html(Math.floor(dohod) + ' рублей')
+            }
+        }
+        let potreb_sum, potreb_time;
+        function checkInpPotr(el) {
+            switch (el.id){
+                case 'potreb_sum':
+                    if (el.value <= 3000000 || el.value >= 50000) potreb_sum = el.value;
+                    else alert('От 50 000 до 3 000 000!')
+                    break;
+                case 'potreb_time':
+                    if (el.value >= 1 && el.value <= 7) potreb_time = el.value;
+                    else alert('Не менее года и не более 7 лет!')
+                    break;
+            }
+            if (potreb_sum && potreb_time) {
+                let stavka = (1 + (14.5/12/100) ^ potreb_time * 12)
+                let monthly = potreb_sum * (14.5/12/100) * stavka / (stavka-1)
+                let dohod = monthly * 2.5;
+                $('#potreb_sum_pr').removeClass('hidden').html(potreb_sum + ' рублей')
+                $('#potreb_stavka').removeClass('hidden').html(Math.floor(stavka,1) + '%');
+                $('#potreb_monthly').removeClass('hidden').html(Math.floor(monthly) + ' руб')
+                $('#potreb_dohod').removeClass('hidden').html(Math.floor(dohod) + ' рублей')
+            }
+        }
+
+        // Слайдер
+        let count = 2;
+        $(document).ready(function() {
+            let slideCount = $('#slider div').length;
+            let slideWidth = $('#slider div').width();
+            let slideHeight = $('#slider div').height();
+
+            $('#slider').css({ width: slideWidth, height: slideHeight });
+            $('#slider div').css({ width: slideWidth });
+
+            setInterval(function() {
+                switch (count) {
+                    case 1:
+                        $('#first_slide_text').removeClass('hidden');
+                        $('#second_slide_text').addClass('hidden');
+                        $('#third_slide_text').addClass('hidden');
+                        break;
+                    case 2:
+                        $('#first_slide_text').addClass('hidden');
+                        $('#second_slide_text').removeClass('hidden');
+                        $('#third_slide_text').addClass('hidden');
+                        break;
+                    case 3:
+                        $('#first_slide_text').addClass('hidden');
+                        $('#second_slide_text').addClass('hidden');
+                        $('#third_slide_text').removeClass('hidden');
+                        break;
+                }
+                if (count >= 3) {
+                    count = 1
+                } else {
+                    ++count;
+                }
+                $('#slider').animate({ marginLeft: -slideWidth }, 1000, function() {
+                    $('#slider div:first').appendTo('#slider');
+                    $('#slider').css('margin-left', '');
+                });
+            }, 5000);
+        });
+
+        // Swiper
+        function getSwipe(el) {
+            switch(el.id) {
+                case 'tab_1':
+                    $('div#first_swipe div, div#first_swipe img').removeClass('hidden');
+                    $('div#second_swipe, div#second_swipe img').addClass('hidden');
+                    $('div#third_swipe, div#third_swipe img').addClass('hidden');
+                    $('div#fourth_swipe, div#fourth_swipe img').addClass('hidden');
+                    break;
+                case 'tab_2':
+                    $('div#first_swipe div, div#first_swipe img').addClass('hidden');
+                    $('div#second_swipe, div#second_swipe img').removeClass('hidden');
+                    $('div#third_swipe, div#third_swipe img').addClass('hidden');
+                    $('div#fourth_swipe, div#fourth_swipe img').addClass('hidden');
+                    break;
+                case 'tab_3':
+                    $('div#first_swipe div, div#first_swipe img').addClass('hidden');
+                    $('div#second_swipe, div#second_swipe img').addClass('hidden');
+                    $('div#third_swipe, div#third_swipe img').removeClass('hidden');
+                    $('div#fourth_swipe, div#fourth_swipe img').addClass('hidden');
+                    break;
+                case 'tab_4':
+                    $('div#first_swipe div, div#first_swipe img').addClass('hidden');
+                    $('div#second_swipe, div#second_swipe img').addClass('hidden');
+                    $('div#third_swipe, div#third_swipe img').addClass('hidden');
+                    $('div#fourth_swipe, div#fourth_swipe img').removeClass('hidden');
+                    break;
+                
+            }
+        }
+
+        // Модальное окно
+        window.onload = function() {
+            $('#openModal').click(function() {
+              $('#modal').css('display', 'flex');
+              $('#login').focus();
+            });
+            
+            // Закрытие модального окна по крестику
+            $('.close').click(function() {
+              $('#modal').css('display', 'none');
+            });
+            
+            // Закрытие модального окна по нажатию клавиши Esc
+            $(document).keyup(function(e) {
+              if (e.key === "Escape") {
+                $('#modal').css('display', 'none');
+              }
+            });
+            
+            // Сохранение значений полей в localStorage
+            $('form').submit(function() {
+              localStorage.setItem('login', $('#login').val());
+              localStorage.setItem('password', $('#password').val());
+            });
+            
+            // Показ пароля при нажатии на кнопку
+            $('#showPassword').click(function() {
+              let passwordField = $('#password');
+              passwordField.attr('type', passwordField.attr('type') === 'password' ? 'text' : 'password');
+            });
+        }
+
+        // Бургер
+        let clicked = '';
+        function getMenu() {
+            if (!clicked) {
+                $('header').css('display', 'flex')
+                clicked = 1;
+            } else {
+                $('header').css('display', 'none')
+                clicked = 0;
+            }
+        }
+    </script>
+</body>
+</html>

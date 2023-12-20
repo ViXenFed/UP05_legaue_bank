@@ -1,0 +1,489 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Regular.woff2);
+}
+
+body {
+    margin: 0; padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto';
+    overflow-x: hidden;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+/* Header */
+#burger {
+    display: none;
+}
+header {
+    padding-top: 1%;
+    display: flex;
+    width: 100vw;
+    text-align: center;
+    padding-left: 10vw;
+    background-color: #F7F8FC;
+}
+#nav a, #cab, #cab a{
+    display: flex;
+    margin-left: 55px;
+    text-decoration: none;
+    color: #000;
+    height: 5vh;
+}
+
+#nav {
+    display: flex;
+    flex-direction: row;
+}
+
+#cab {
+    margin-left: 15vw;
+}
+
+/* Slider */
+#slider {
+    color: white;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#slider div {
+    float: left;
+    width: 100%;
+}
+
+#slider img {
+    width: 100vw;
+    height: 40vh;
+    z-index: -1;
+}
+
+.slide_text {
+    /* z-index: 10; */
+    position: absolute;
+    top: 15vh;
+    left: 25vw;
+    font-size: 20pt;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#first_slide_text a {
+    padding: 14px;
+    font-size: 14pt;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+#first_slide_text a:hover {
+    color: white;
+    background-color: blue;
+    cursor: pointer;
+}
+
+#second_slide_text, #third_slide_text {
+    color: #000;
+}
+
+#third_slide_text a {
+    padding: 14px;
+    font-size: 14pt;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid blue;
+}
+
+#third_slide_text a:hover {
+    color: blue;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Swiper */
+#swiper {
+    display: flex;
+    flex-direction: column;
+    width: 75vw;
+    margin-top: 5vh;
+    margin-left: 11vw;
+    padding-left: 5vw;
+    background-color: #F7F8FC;
+    padding-bottom: 5vh;
+}
+#tab {
+    display: flex;
+    flex-direction: row;
+    font-size: 16pt;
+    justify-content: space-between;
+}
+
+#tab p {
+    margin-right: 5vw;
+}
+
+.swiper_text {
+    width: 25vw;
+    font-size: 16pt;
+
+}
+
+.swiper__header {
+    font-size: 20pt;
+    font-style: bold;
+}
+
+.swipes {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#swiper__slide {
+    display: flex;
+}
+
+.swiper_btn {
+    padding: 14px;
+    font-size: 14pt;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid blue;
+}
+
+.swiper_btn:hover {
+    color: blue;
+    background-color: #F7F8FC;
+    border: 1px solid blue;
+    cursor: pointer;
+}
+
+.swiper_img {
+    display: flex;
+    max-width: 50vw;
+    max-height: 30vh;
+}
+
+/* Credit */
+#credit {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 5vh;
+    left: 17vw;
+}
+
+#calc {
+    max-width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.calc_input {
+    font-size: 14pt;
+    padding: 15px;
+    width: 30vw;
+}
+
+#print_info {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10vw;
+}
+
+.ip, .auto, .potreb {
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.flex_1, .flex_2 {
+    width: 80vw;
+}
+
+.person {
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+    width: 15vw;
+}
+
+.person label {
+    height: 24pt;
+}
+
+#credit_info {
+    background-color: #F7F8FC;
+    padding: 2vw;
+    width: 22vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.txt_column {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5vh;
+}
+
+.txt_column p {
+    margin-right: 2vw;
+}
+
+#credit_info button {
+    padding: 14px;
+    font-size: 14pt;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid blue;
+}
+
+#credit_info button:hover {
+    color: blue;
+    background-color: #F7F8FC;
+    border: 1px solid blue;
+    cursor: pointer;
+}
+
+/* Карта */
+#map {
+    margin-top: 7vh;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10vh;
+    margin-left: 15vw;
+}
+
+#map h1 {
+    padding-bottom: 3vh;
+}
+
+#map img {
+    width: 70vw;
+    height: 50vh;
+}
+
+/* footer */
+footer {
+    display: flex;
+    background-color: #F7F8FC;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+    height: 17vh;
+    padding-top: 3vh;
+}
+
+.foot_el {
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    margin-right: 2vw;
+    height: 15vh;
+}
+
+#info_footer p {
+    color: gray;
+    font-size: 8pt;
+}
+
+#nav_footer p{
+    font-size: 12pt;
+    height: 5px;
+}
+
+.tel a{
+    font-size: 12pt;
+    text-decoration: none;
+    color: #000;
+}
+
+.tel p {
+    color: gray;
+    font-size: 8pt;
+}
+
+/* technical */
+.hidden {
+    display: none;
+}
+
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    #burger {
+        display: block;
+    }
+    header {
+        padding-left: 0;
+        padding-top: 3%;
+        font-size: 10pt;
+        padding-bottom: 15px;
+    }
+    #cab {
+        margin-left: 0;
+    }
+    #nav a, #cab, #cab a{
+        margin-left: 5px;
+        font-size: 12pt;
+    }
+    #swiper img {
+        height: 40vh;
+        width: 40vw;
+    }
+    .swiper_text {
+        font-size: 12pt;
+    }
+    #calc select, #calc input {
+        width: 20vw;
+        font-size: 12pt;
+    }
+    #calc label {
+        width: 40vw;
+    }
+    .person p {
+        width: 40vw;
+        height: 30vh;
+    }
+
+    #credit_info {
+        width: 40vh;
+        font-size: 10pt;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 763px) {
+    #burger {
+        display: block;
+    }
+    body {
+        overflow-x: hidden;
+    }
+    header {
+        display: none;
+        flex-direction: column;
+    }
+    #nav {
+        flex-direction: column;
+    }
+    #cab {
+        margin-left: 0;
+    }
+    #slider {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+    .slide_text {
+        font-size: 12pt;
+        margin-left: 20vw;
+    }
+    .slide_text a {
+        margin-top: 5vw;
+        width: 40vw;
+        height: 5vw
+    }
+    .slide_text h1, .slide_text p {
+        width: 40vw;
+        margin-left: 5vw;
+    }
+    #slider img {
+        height: 30vh
+    }
+    #swiper {
+        margin-top: 0vw;
+        margin-left: 0vw;
+    }
+    #tab p {
+        margin-right: 4vw;
+        font-size: 10pt;
+    }
+    #swiper__slide img {
+        display: none;
+    }
+    .swiper_text {
+        font-size: 12pt;
+        width: 70vw;
+    }
+    #credit, #calc {
+        display: flex;
+        flex-direction: column;
+    }
+    .ip, .auto, .potreb {
+        width: 80vw;
+        flex-direction: column;
+    }
+    .txt_column {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5vh;
+    }
+    #calc select, #calc input {
+        width: 70vw;
+        font-size: 12pt;
+    }
+    .person p {
+        width: 80vw;
+        /* height: 50vh; */
+        margin-left: 0;
+    }
+    #calc label {
+        width: 80vw;
+    }
+    #credit_info {
+        width: 80vw;
+        font-size: 10pt;
+        height: 70vh;
+    }
+    footer {
+        flex-direction: column;
+        height: auto;
+    }
+    .foot_el {
+        width: 80vw;
+        height: auto;
+    }
+}
